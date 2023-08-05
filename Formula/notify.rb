@@ -11,7 +11,7 @@ class Notify < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/cdevoogd/notify/releases/download/v0.1.0/notify_Darwin_arm64.tar.gz"
-      sha256 "237db3827b291d67865d84399fd25267c97691f3a121f095e400a12dea616871"
+      sha256 "80ab9bcfaee49a422a1a95c4867224c3d16c09a10919b4bb3697172e8ecac0ef"
 
       def install
         bin.install "notify"
@@ -19,7 +19,7 @@ class Notify < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/cdevoogd/notify/releases/download/v0.1.0/notify_Darwin_x86_64.tar.gz"
-      sha256 "d11fbcce6c44ae010327239f1429af35ec5d0c004eeb172014b4b1dc1be7f077"
+      sha256 "d9f4e360ceca32bffe42bf600c7e6045d2350879066fd86a452f196eedd010a4"
 
       def install
         bin.install "notify"
@@ -28,17 +28,17 @@ class Notify < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/cdevoogd/notify/releases/download/v0.1.0/notify_Linux_x86_64.tar.gz"
-      sha256 "1743209d5ca7fc991b280e6d8385a7381c675a387a26ed614d665aa83560e2ff"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/cdevoogd/notify/releases/download/v0.1.0/notify_Linux_arm64.tar.gz"
+      sha256 "27fe9349dea9e0159e9db5bc391f7ee51eba1694d322d93e3c5423bfbd0f1090"
 
       def install
         bin.install "notify"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cdevoogd/notify/releases/download/v0.1.0/notify_Linux_arm64.tar.gz"
-      sha256 "244b8b336f1876012371480febd96d12614eead7e5d7fbbe3c381a4e290de44e"
+    if Hardware::CPU.intel?
+      url "https://github.com/cdevoogd/notify/releases/download/v0.1.0/notify_Linux_x86_64.tar.gz"
+      sha256 "73fab541a58607105ff6adbc44ffe656d409e2c0cae276d39460262e9789be14"
 
       def install
         bin.install "notify"
