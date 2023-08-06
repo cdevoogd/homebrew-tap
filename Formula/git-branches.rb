@@ -5,21 +5,21 @@
 class GitBranches < Formula
   desc "An alternative to `git branch` with some extra information."
   homepage "https://github.com/cdevoogd/git-branches"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/cdevoogd/git-branches/releases/download/v0.1.0/git-branches_Darwin_x86_64.tar.gz"
-      sha256 "f38134853702e06b8915e64fcf21433ff716206d368b027440254f773fb3b795"
+    if Hardware::CPU.arm?
+      url "https://github.com/cdevoogd/git-branches/releases/download/v0.2.0/git-branches_Darwin_arm64.tar.gz"
+      sha256 "36331ec2c21f782511d1e7a27c00d785c34fd529934ae8f055a0dede301d2e47"
 
       def install
         bin.install "git-branches"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/cdevoogd/git-branches/releases/download/v0.1.0/git-branches_Darwin_arm64.tar.gz"
-      sha256 "3722f71edf98ebfdae19cc945bf9dc2a801f27178a103550bc3885fb759da937"
+    if Hardware::CPU.intel?
+      url "https://github.com/cdevoogd/git-branches/releases/download/v0.2.0/git-branches_Darwin_x86_64.tar.gz"
+      sha256 "89b9076693c97afe3cda888f7f29e6863f10965ea5094380110f549fce602e1f"
 
       def install
         bin.install "git-branches"
@@ -29,16 +29,16 @@ class GitBranches < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cdevoogd/git-branches/releases/download/v0.1.0/git-branches_Linux_arm64.tar.gz"
-      sha256 "fedd3013a1b329866a03004b13797541eb949a7d9df169ec0f3cb890c3438049"
+      url "https://github.com/cdevoogd/git-branches/releases/download/v0.2.0/git-branches_Linux_arm64.tar.gz"
+      sha256 "d07348b4e54c1a85d6a3e2b6e15db48c115ed8a578c461c1450811e0bb665387"
 
       def install
         bin.install "git-branches"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/cdevoogd/git-branches/releases/download/v0.1.0/git-branches_Linux_x86_64.tar.gz"
-      sha256 "407a34d7e8b6f6722e323c9d7b64f78645074d1aff415f16f6e8d432bbcd96d3"
+      url "https://github.com/cdevoogd/git-branches/releases/download/v0.2.0/git-branches_Linux_x86_64.tar.gz"
+      sha256 "c62fd1977f2b1e45fe8fddb5bc288f6eb4be3bc1e388e128386808c4857b8f6d"
 
       def install
         bin.install "git-branches"
