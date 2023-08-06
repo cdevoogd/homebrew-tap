@@ -5,21 +5,21 @@
 class Notify < Formula
   desc "A tool to send notifications to your phone when a command is complete."
   homepage "https://github.com/cdevoogd/notify"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/cdevoogd/notify/releases/download/v0.1.0/notify_Darwin_arm64.tar.gz"
-      sha256 "80ab9bcfaee49a422a1a95c4867224c3d16c09a10919b4bb3697172e8ecac0ef"
+    if Hardware::CPU.intel?
+      url "https://github.com/cdevoogd/notify/releases/download/v0.2.0/notify_Darwin_x86_64.tar.gz"
+      sha256 "e7a4ed412fcdde5f157824996c7450390d823a964980f8676a7d52ee037dd0c0"
 
       def install
         bin.install "notify"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/cdevoogd/notify/releases/download/v0.1.0/notify_Darwin_x86_64.tar.gz"
-      sha256 "d9f4e360ceca32bffe42bf600c7e6045d2350879066fd86a452f196eedd010a4"
+    if Hardware::CPU.arm?
+      url "https://github.com/cdevoogd/notify/releases/download/v0.2.0/notify_Darwin_arm64.tar.gz"
+      sha256 "a452b84253536732099ed6c756ec9c4c970759cc020728160a306b618eb61c86"
 
       def install
         bin.install "notify"
@@ -29,16 +29,16 @@ class Notify < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cdevoogd/notify/releases/download/v0.1.0/notify_Linux_arm64.tar.gz"
-      sha256 "27fe9349dea9e0159e9db5bc391f7ee51eba1694d322d93e3c5423bfbd0f1090"
+      url "https://github.com/cdevoogd/notify/releases/download/v0.2.0/notify_Linux_arm64.tar.gz"
+      sha256 "a394231fe4df6f7873fe6690112c2f747ad664d267ba6e730d9cc4fa0a91304f"
 
       def install
         bin.install "notify"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/cdevoogd/notify/releases/download/v0.1.0/notify_Linux_x86_64.tar.gz"
-      sha256 "73fab541a58607105ff6adbc44ffe656d409e2c0cae276d39460262e9789be14"
+      url "https://github.com/cdevoogd/notify/releases/download/v0.2.0/notify_Linux_x86_64.tar.gz"
+      sha256 "f85f23bea03e51d55ee11763c1fc89a86d7a7cab709ada9dc7ee963fce6ccfeb"
 
       def install
         bin.install "notify"
