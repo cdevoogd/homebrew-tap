@@ -1,6 +1,6 @@
 cask "font-akoni-nerd-font" do
-  version "1.2.0"
-  sha256 "7eee52e2d50bee38bb4dcfc4d32a5b64883e504431b3f67d363c858a97cac02c"
+  version "1.2.1"
+  sha256 "f19d417a25017260195177f260a390ba1d7633dfd82dc8da142ce96011ea18dd"
 
   url "https://github.com/cdevoogd/akoni/releases/download/v#{version}/akoni-nerd-font-#{version}.zip"
   name "Akoni Nerd Font"

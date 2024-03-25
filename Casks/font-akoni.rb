@@ -1,5 +1,5 @@
 cask "font-akoni" do
-  version "1.2.0"
+  version "1.2.1"
   sha256 "621e965a91a936938f3968fc7915aeea04191b0b7a57194fed4e8c7346645da5"
 
   url "https://github.com/cdevoogd/akoni/releases/download/v#{version}/akoni-#{version}.zip"
